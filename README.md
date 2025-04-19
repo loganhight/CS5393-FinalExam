@@ -1,5 +1,5 @@
 
-# **CS 5393 - Advanced Pythong Final Exam**
+# **CS 5393 - Advanced Python Final Exam**
 
 # **Stock Price Prediction using RNNs**
 
