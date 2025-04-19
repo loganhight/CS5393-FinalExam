@@ -4,7 +4,7 @@
 # **Stock Price Prediction using RNNs**
 
 - **Author**: Logan Hight
-- **Date**: April 19, 2025
+- **Date**: April 20, 2025
 
 ## **Overview**
 
@@ -31,7 +31,8 @@ CS5393-FinalExam/
 │
 ├── performance_evaluations/       # Plots and visualizations of performance
 │   ├── Absolute_Error_Distribution.png
-│   ├── Model_Performance_Comparison.png
+│   ├── RMSE_MAE_Comparison.png
+|   ├── Training_Prediction_Time_Comparison.png
 │   ├── *_actual_vs_predicted.png
 │
 ├── training_curves/               # Training loss/MAE per model
@@ -67,7 +68,7 @@ The objective is to build a stock price prediction system using deep learning, c
    - ELU
    - SELU
 
-Each model is evaluated quantitatively and statistically, using RMSE, MAE, and multiple significance tests.
+Each model is evaluated quantitatively and statistically, using RMSE, MAE, Training Time, Prediction Time, and multiple significance tests.
 
 ---
 
@@ -75,10 +76,11 @@ Each model is evaluated quantitatively and statistically, using RMSE, MAE, and m
 
 - **RMSE (Root Mean Squared Error):** Penalizes large errors more severely. Appropriate for high-risk environments like trading.
 - **MAE (Mean Absolute Error):** Measures average dollar deviation. Useful for executive-level interpretability.
+- **Training & Prediction Time:** Crucial for deployment feasibility. Lower runtime improves scalability and enables real-time or frequent model retraining in dynamic markets.
 - **Boxplots & Prediction Plots:** Help visualize distributional differences and model responsiveness.
 - **Statistical Tests:**
-  - Paired t-tests
-  - Wilcoxon signed-rank tests
+  - Paired t-tests  
+  - Wilcoxon signed-rank tests  
   - One-way ANOVA
 
 ---
@@ -120,13 +122,16 @@ jupyter notebook CS_5393_Final_Exam.ipynb
 ## **Final Recommendation**
 
 After extensive testing and evaluation:
+
 - **GRU with ELU activation** is recommended for deployment due to its:
   - Low RMSE and MAE
+  - Fast inference time
   - Stable training
   - Accurate price tracking
   - Superior statistical significance profile
 
 This model is appropriate for production in business scenarios such as:
+
 - Automated forecasting dashboards
 - Trading signal engines
 - Risk assessment tools
