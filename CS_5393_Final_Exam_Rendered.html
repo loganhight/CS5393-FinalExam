@@ -12625,7 +12625,7 @@ This section consolidates and compares the performance of all trained models:</p
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Model-Performance-Summary-(RMSE-&amp;-MAE)-%E2%80%93-Key-Insights"><strong>Model Performance Summary (RMSE &amp; MAE) – Key Insights</strong><a class="anchor-link" href="#Model-Performance-Summary-(RMSE-&amp;-MAE)-%E2%80%93-Key-Insights">¶</a></h2><ul>
-<li><p>The <strong>baseline GRU model</strong> outperformed LSTM in both RMSE (<strong>2.8678 vs. 2.7212</strong>) and MAE (<strong>2.1909 vs. 2.0651</strong>), validating GRU's strength in modeling sequential dependencies more efficiently.</p>
+<li><p>The <strong>baseline GRU model</strong> failed to outperform LSTM in both RMSE (<strong>2.8678 vs. 2.7212</strong>) and MAE (<strong>2.1909 vs. 2.0651</strong>), which seems odd considering alleged GRU's strength in modeling sequential dependencies more efficiently.</p>
 </li>
 <li><p>Adding <strong><code>Volume</code> as an input feature</strong> resulted in <strong>slightly worse performance</strong> (RMSE: <strong>3.1602</strong>, MAE: <strong>2.4467</strong>) than the GRU baseline. This suggests that trading volume may introduce complexity without reliably boosting accuracy.</p>
 </li>
@@ -13417,7 +13417,7 @@ One-Way ANOVA across all models: F = 2964.0668, p = 0.0000e+00
 <h3 id="Why-GRU-+-ELU?"><strong>Why GRU + ELU?</strong><a class="anchor-link" href="#Why-GRU-+-ELU?">¶</a></h3><ul>
 <li>Delivers <strong>superior prediction accuracy</strong> with minimal variance</li>
 <li>Offers <strong>consistent performance</strong> across the entire price range and time horizon</li>
-<li><strong>Outperforms LSTM</strong> in both runtime and stability, with <strong>~20% faster training time</strong></li>
+<li><strong>Outperforms LSTM</strong> in both runtime and stability, with <strong>~50% faster prediction time</strong></li>
 <li>ELU improves <strong>gradient flow</strong> and handles negative activations more smoothly than ReLU</li>
 <li>Statistically validated to be one of the <strong>most stable and distinguishable predictors</strong> in the ensemble</li>
 </ul>
